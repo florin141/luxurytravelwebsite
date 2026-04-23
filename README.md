@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aurora Luxe Travel
 
-## Getting Started
+Ultra-premium concierge travel landing page with a futuristic luxury aesthetic — dark mode, glassmorphism, neon accents, and cinematic animations.
 
-First, run the development server:
+## Features
+
+- **Futuristic luxury design** — near-black backgrounds, icy white text, cyan/purple/magenta accent gradients, soft gold highlights
+- **Glassmorphism** — frosted-glass navbar, cards, and modals
+- **Cinematic hero** — animated aurora gradient blobs, parallax scroll, noise texture
+- **Scroll-based animations** — framer-motion reveal animations on every section
+- **Active section tracking** — navbar highlights the current section while scrolling
+- **Destination cards** — hover shimmer, reveal quick facts, click-to-open modal
+- **5 Signature Experiences** — alternating image/text layout with staggered animations
+- **3 Membership Tiers** — Silver, Black, Obsidian with gold accent on popular tier
+- **Testimonials** — 4 reviews with star ratings and avatars
+- **Concierge form** — client-side validated with interests chips, budget selector, success toast
+- **Responsive** — mobile-first, FAB button on mobile, hamburger menu
+- **SEO** — OpenGraph + Twitter Card metadata, semantic headings, aria labels, skip-to-content link
+- **Accessibility** — focus rings, keyboard nav, semantic HTML, good contrast
+
+## Tech Stack
+
+- **Next.js 16** (App Router) + TypeScript
+- **Tailwind CSS v4** (CSS-based config)
+- **Framer Motion** — scroll/entrance animations
+- **Lucide React** — icons
+- **Google Fonts** — Space Grotesk (headings) + Inter (body)
+
+## How to Run
 
 ```bash
+# Install dependencies
+npm install
+
+# Start dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Image Credits
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+All images are sourced from [Unsplash](https://unsplash.com) under the Unsplash License (free to use).
 
-## Learn More
+| Section | Image Source |
+|---------|-----|
+| Hero background | Unsplash — luxury travel aerial view |
+| Maldives resort | Unsplash — tropical resort |
+| Tokyo skyline | Unsplash — Tokyo night city |
+| Swiss Alps | Unsplash — aurora over mountains |
+| Dubai hotel | Unsplash — Dubai architecture |
+| Safari lodge | Unsplash — African wildlife camp |
+| Mediterranean yacht | Unsplash — luxury yacht sailing |
+| Private jet | Unsplash — private aircraft |
+| Michelin dining | Unsplash — restaurant interior |
+| Desert | Unsplash — Sahara dunes |
+| Alpine wellness | Unsplash — mountain landscape |
+| Testimonial avatars | Unsplash — portrait photos |
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/
+  app/
+    layout.tsx          # Root layout, fonts, SEO metadata
+    page.tsx            # Assembled page
+    globals.css         # Tailwind theme, animations, utility classes
+  components/
+    Navbar.tsx          # Sticky glass navbar with active section
+    Hero.tsx            # Cinematic hero with aurora blobs
+    DestinationGrid.tsx # 6-card destination grid
+    DestinationModal.tsx # Click-to-expand destination detail
+    ExperienceList.tsx  # Signature experiences
+    Tiers.tsx           # Membership tiers
+    Testimonials.tsx    # Customer reviews
+    ConciergeForm.tsx   # Client-side validated concierge form
+    Toast.tsx           # Success toast notification
+    Footer.tsx          # Minimal premium footer
+  data/
+    destinations.ts     # 6 destination objects
+    experiences.ts      # 5 experience objects
+    tiers.ts            # 3 membership tier objects
+    testimonials.ts     # 4 testimonial objects
+  lib/
+    constants.ts        # Brand config, nav items
+    utils.ts            # cn() class merge utility
+```
