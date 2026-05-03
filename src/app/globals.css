@@ -149,14 +149,12 @@
   .glass {
     background: var(--color-bg-glass);
     backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
     border: 1px solid var(--color-border-glass);
   }
 
   .glass-strong {
     background: rgba(255, 255, 255, 0.06);
     backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
@@ -167,16 +165,14 @@
       var(--color-gradient-mid),
       var(--color-gradient-end)
     );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
+    color: transparent;
   }
 
   .text-gradient-gold {
     background: linear-gradient(135deg, var(--color-accent-gold-light), var(--color-accent-gold));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
+    color: transparent;
   }
 
   .border-gradient {
@@ -197,9 +193,7 @@
       var(--color-gradient-mid),
       var(--color-gradient-end)
     );
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
     mask-composite: exclude;
     opacity: 0;
     transition: opacity 0.4s ease;
